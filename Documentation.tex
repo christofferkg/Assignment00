@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.8in]{geometry}
+
+\usepackage{graphicx}
+\graphicspath{{./Graphics}}
+
+\title{Documentation}
+\author{Christoffer Gram}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+    \includegraphics{IsLeapYear.png}
+
+    \texttt{IsLeapYear} is a function that returns true if a the input year is a leap year, and false if it is not a
+    leap year. We achieve this with a series of four boolean statements. First, we discard any input that pre-dates
+    1582. Next it is assessed whether the input is simultaneously divisible by 100 and 400, this is a leap year and so
+    \texttt{IsLeapYear}. Thereafter we discard any years that are dibisible by only 100. Finally, return true if the input
+    is divisible by 4, and false otherwise.  
+\end{document}

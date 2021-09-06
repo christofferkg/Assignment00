@@ -36,7 +36,6 @@ namespace MyApp
 
         public static String GetUserInput() {
             Console.WriteLine("Enter a year:");
-            Console.Write("> ");
 
             return Console.ReadLine();
         }

@@ -33,5 +33,33 @@ namespace MyApp.Tests
             var output = Program.IsLeapYear(year);
             Assert.False(output);
         }
+
+        [Fact]
+        public void IsLeapYear_OutputsYay() {
+            var reader = new StringReader("2000");
+            Console.SetIn(reader);
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+
+            Program.Main(new string[0]);
+            string output = writer.ToString();
+            output = output.Split("\n")[1];
+
+            Assert.Equal("yay", output);
+        }
+
+        [Fact]
+        public void IsLeapYear_OutputsNay() {
+            var reader = new StringReader("1973");
+            Console.SetIn(reader);
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+
+            Program.Main(new string[0]);
+            string output = writer.ToString();
+            output = output.Split("\n")[1];
+
+            Assert.Equal("nay", output);
+        }
     }
 }
